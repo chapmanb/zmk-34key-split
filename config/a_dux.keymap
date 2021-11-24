@@ -1,0 +1,88 @@
+/*
+ * Copyright (c) 2021 The ZMK Contributors
+ *
+ * SPDX-License-Identifier: MIT
+ */
+
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/bt.h>
+
+#define DEFAULT 0
+#define NUM 1
+#define NAV 2
+
+/* Avoid issues with double keypresses on Purpz and other light keys
+ * https://discord.com/channels/719497620560543766/719909884769992755/882965364038844446
+ */
+&kscan0 {
+    debounce-period = <15>;
+};
+
+/ * Longer release time on sticky keys like ctrl and alt */
+&sk {
+  release-after-ms = <2000>;
+};
+
+/ {
+  behaviors {
+        hm: homerow_mods {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW_MODS";
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            quick_tap_ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+        };
+        /* Avoid double letters with sticky shift and quick typing */
+        skq: sticky_key_quick_release {
+            compatible = "zmk,behavior-sticky-key";
+            label = "STICKY_KEY_QUICK_RELEASE";
+            #binding-cells = <1>;
+            bindings = <&kp>;
+            release-after-ms = <1000>;
+            quick-release;
+        };
+    };
+
+  combos {
+      compatible = "zmk,combos";
+      /* jk for esc */
+      combo_esc {
+          timeout-ms = <50>;
+          key-positions = <16 17>;
+          layers = <0>;
+          bindings = <&kp ESC>;
+      };
+  };
+
+	keymap {
+		compatible = "zmk,keymap";
+
+		base_layer {
+			bindings = <
+				&kp Q  &kp W          &kp E  &kp R           &kp T         &kp Y          &kp U         &kp I     &kp O     &kp P
+				&kp A  &kp S          &kp D  &kp F           &kp G         &kp H          &kp J         &kp K     &kp L     &kp APOSTROPHE
+				&kp Z  &kp X          &kp C  &hm LCTRL V     &kp B         &kp N          &hm RCTRL M   &kp COMMA &kp DOT   &kp SLASH
+				                             &mt LSHIFT TAB  &lt NUM ESC   &lt NAV SPACE  &kp BSPC
+			>;
+		};
+		num_layer {
+			bindings = <
+				&kp LG(L)  &none    &none       &kp PRINTSCREEN &none      &kp PLUS      &kp N7   &kp N8  &kp N9   &kp TILDE
+				&none      &sk LALT &sk LSHIFT  &skq LCTRL      &none      &kp ASTERISK  &kp N4   &kp N5  &kp N6   &kp EQUAL
+				&none      &none    &none       &none           &none      &kp MINUS     &kp N1   &kp N2  &kp N3   &kp BACKSLASH
+				                                &none           &mo NUM    &kp ENTER     &kp N0
+			>;
+		};
+		nav_layer {
+			bindings = <
+				&kp EXCLAMATION &kp AT      &kp LEFT_BRACE       &kp RIGHT_BRACE       &kp PIPE          &kp GRAVE    &kp AMPERSAND  &kp SEMICOLON  &kp COLON  &kp DOUBLE_QUOTES
+				&kp HASH        &kp DOLLAR  &kp LEFT_PARENTHESIS &kp RIGHT_PARENTHESIS &kp MINUS         &kp LEFT     &kp DOWN       &kp UP         &kp RIGHT  &kp APOSTROPHE
+				&kp PERCENT     &kp CARET   &kp LEFT_BRACKET     &kp RIGHT_BRACKET     &kp UNDERSCORE    &kp PAGE_UP  &kp PAGE_DOWN  &kp HOME       &kp END    &none
+				                                                 &kp LG(TAB)           &kp LEFT_META     &mo NAV      &none
+			>;
+		};
+	};
+};
