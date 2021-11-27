@@ -4,7 +4,7 @@ To treat wrist and elbow RSI issues caused by too much time programming, I'm
 using ergonomic mechanical keyboards with the following properties:
 
 - Split: two halves, allowing shoulder width spacing to prevent hunching
-- Low profile: lower keys and base, encouraging hand hovering to prevent bending
+- Low profile: lower keys and base, teaching hand hovering to prevent bending
   my wrists.
 - Thumb cluster: transfer common keys to your stronger thumbs
 - Small: less keys avoid reaching, especially with your weaker pinky fingers.
@@ -13,7 +13,7 @@ using ergonomic mechanical keyboards with the following properties:
   travel.
 - Ortholinear and staggered: fits better with natural curve of your hand.
   Stagger helps spread out your hand, giving many of the benefits of tenting
-  your keyboard in more transportable setup.
+  your keyboard in a more transportable setup.
 - Programmable: you have full control to layout your keyboard in layers with
   comfortable locations based on usage, avoiding scrunching and uncomfortable
   positions for common actions.
@@ -70,7 +70,7 @@ For the keyboard you need to obtain:
 - Controller sockets and batteries -- Sockets attach the controller to the PCB,
   enabling removal of the controller and providing a place for the battery.
   [Little Keyboards battery and socket combo](https://www.littlekeyboards.com/collections/miscellaneous/products/battery-combo-nice-nano-controller)
-  is a great option to get all the parts in one place. MKUltra also sell the
+  is a great option to get all the parts in one place. MKUltra also sell the taller
   [HiPro sockets](https://mkultra.click/mill-max-micro-controller-sockets-and-pins/),
   [Batteries](https://mkultra.click/301230-lipo-battery-with-jst-connector/)
   and [Optional battery connectors](https://mkultra.click/battery-wires-jst-ph-2-0/).
@@ -79,10 +79,10 @@ For the keyboard you need to obtain:
 - Switches -- These boards use Kailh Low Profile v1 Choc Switches, which come in
   many different options depending on preferences. I found using light linear
   switches a great option and like the Pro Reds
-  from [Little Keyboards][https://www.littlekeyboards.com/collections/keyboard-switches/products/kailh-choc-pro-low-profile-switches]
+  from [Little Keyboards](https://www.littlekeyboards.com/collections/keyboard-switches/products/kailh-choc-pro-low-profile-switches)
   or [MKUltra](https://mkultra.click/choc-switches) and the lighter
   [Purpz from Boardsource](https://boardsource.xyz/store/5fff705f03db380da20f1014).
-- Keycaps -- The primary option is the nice MBK low profile keycaps
+- Keycaps -- The primary option is the nice MBK low profile keycaps from
   [MKUltra](https://mkultra.click/mbk-choc-keycaps),
   [LittleKeyboards](https://www.littlekeyboards.com/collections/keycaps/products/mbk-choc-low-profile-keycaps)
   or [Boardsource](https://boardsource.xyz/store/5f6ef2d68e3bf05ab838f918).
@@ -112,7 +112,7 @@ inspiration from:
 - [Seniply](https://stevep99.github.io/seniply/) -- nicely thought out layers
   for programmers with symbols and special keys
 
-I used [ZMK keyboard firmware](https://zmk.dev/) which enables these custom
+I used [ZMK keyboard firmware](https://zmk.dev/) which enables custom
 key layouts on wireless split keyboards. [QMK firmware](https://qmk.fm/) is the
 other popular choice for wired keyboards.
 
