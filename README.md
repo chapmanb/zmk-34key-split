@@ -44,7 +44,7 @@ up building 3 different related boards with unique tweaks:
   -- 34 keys with aggressive stagger, even lower pinky keys and wider thumbs; no
   power or reset switches.
 
-<img src="https://raw.githubusercontent.com/chapmanb/zmk-34key-split/main/images/sweep_hypergolic.jpg" width="200">
+<img src="https://raw.githubusercontent.com/chapmanb/zmk-34key-split/main/images/sweep_hypergolic.jpg" width="400">
 
 ## Building
 
