@@ -57,14 +57,14 @@
       };
       /* fg for control */
       combo_lctrl {
-          timeout-ms = <50>;
+          timeout-ms = <75>;
           key-positions = <13 14>;
           layers = <0 1>;
           bindings = <&sk LCTRL>;
       };
       /* hj for control */
       combo_rctrl {
-          timeout-ms = <50>;
+          timeout-ms = <75>;
           key-positions = <15 16>;
           layers = <0 1>;
           bindings = <&sk RCTRL>;
