@@ -67,7 +67,7 @@
           timeout-ms = <75>;
           key-positions = <7 8>;
           layers = <0 1 2>;
-          bindings = <&sk BSPC>;
+          bindings = <&kp BSPC>;
       };
       /* right thumbs for control */
       combo_rctrl_thumb {
