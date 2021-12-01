@@ -70,7 +70,7 @@
           bindings = <&sk RCTRL>;
       };
       /* right thumbs for control */
-      combo_rctrl {
+      combo_rctrl_thumb {
           timeout-ms = <75>;
           key-positions = <32 33>;
           layers = <0 1>;
