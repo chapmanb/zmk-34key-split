@@ -69,6 +69,13 @@
           layers = <0 1>;
           bindings = <&sk RCTRL>;
       };
+      /* right thumbs for control */
+      combo_rctrl {
+          timeout-ms = <75>;
+          key-positions = <32 33>;
+          layers = <0 1>;
+          bindings = <&sk RCTRL>;
+      };
   };
 
 	keymap {
@@ -77,14 +84,14 @@
 		base_layer {
 			bindings = <
 				&kp Q  &kp W          &kp E  &kp R           &kp T         &kp Y          &kp U         &kp I     &kp O     &kp P
-				&kp A  &kp S          &kp D  &kp F           &kp G         &kp H          &kp J         &kp K     &kp L     &kp APOSTROPHE
+				&kp A  &kp S          &kp D  &kp F           &kp G         &kp H          &kp J         &kp K     &kp L     &kp BSPC
 				&kp Z  &kp X          &kp C  &kp V           &kp B         &kp N          &kp M         &kp COMMA &kp DOT   &kp SLASH
-				                             &mt LSHIFT TAB  &lt NUM ESC   &lt NAV SPACE  &kp BSPC
+				                             &mt LSHIFT TAB  &lt NUM ESC   &lt NAV SPACE  &mt RCTRL BSPC
 			>;
 		};
 		num_layer {
 			bindings = <
-				&kp LG(L)  &none    &none       &kp PRINTSCREEN &none      &kp PLUS      &kp N7   &kp N8  &kp N9   &kp TILDE
+				&kp LG(L)  &none    &kp BSPC    &kp PRINTSCREEN &none      &kp PLUS      &kp N7   &kp N8  &kp N9   &kp TILDE
 				&none      &sk LALT &skq LSHIFT &sk LCTRL       &none      &kp ASTERISK  &kp N4   &kp N5  &kp N6   &kp EQUAL
 				&none      &none    &none       &none           &none      &kp MINUS     &kp N1   &kp N2  &kp N3   &kp BACKSLASH
 				                                &none           &mo NUM    &kp ENTER     &kp N0
