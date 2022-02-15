@@ -69,10 +69,10 @@
           layers = <0 1 2>;
           bindings = <&kp BSPC>;
       };
-      /* we for enter */
+      /* xc for enter */
       combo_enter {
           timeout-ms = <75>;
-          key-positions = <1 2>;
+          key-positions = <21 22>;
           layers = <0 1 2>;
           bindings = <&kp ENTER>;
       };
