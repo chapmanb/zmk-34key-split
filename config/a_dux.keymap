@@ -93,7 +93,7 @@
 			bindings = <
 				&kp LG(L)  &none    &none       &kp PRINTSCREEN &none      &kp PLUS      &kp N7   &kp N8  &kp N9   &kp TILDE
 				&none      &sk LALT &skq LSHIFT &sk LCTRL       &none      &kp ASTERISK  &kp N4   &kp N5  &kp N6   &kp EQUAL
-				&none      &none    &none       &none           &none      &kp MINUS     &kp N1   &kp N2  &kp N3   &kp BACKSLASH
+				&none      &none    &none       &none           &bt BT_CLR &kp MINUS     &kp N1   &kp N2  &kp N3   &kp BACKSLASH
 				                                &none           &mo NUM    &none         &kp N0
 			>;
 		};
